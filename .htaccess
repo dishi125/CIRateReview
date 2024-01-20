@@ -1,0 +1,7 @@
+RewriteOptions inherit
+<IfModule mod_rewrite.c>
+ RewriteEngine on RewriteBase /your_root/
+ RewriteCond %{REQUEST_FILENAME} !-f
+ RewriteCond %{REQUEST_FILENAME} !-d
+ RewriteRule ^(.*)$ index.php?/$1 [L]
+</IfModule>
